@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Noto Serif Devanagari',serif;
+background:black;
+color:white;
+overflow:hidden;
+}
+
+
+.page{
+height:100vh;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+
+/* PAGE 1 */
+
+.page1{
+
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.8)
+),
+url("your-photo.jpg");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+.page1 h1{
+font-size:45px;
+text-shadow:0 0 20px purple;
+}
+
+
+
+/* PAGE 2 */
+
+.page2{
+
+background:
+linear-gradient(
+rgba(0,0,0,.4),
+rgba(0,0,0,.8)
+),
+url("second-photo.jpg");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+
+/* PAGE 3 */
+
+.page3{
+
+background:
+radial-gradient(circle at top,
+#7e22ce,
+#240046,
+#000);
+
+padding:30px;
+
+}
+
+
+.message h1{
+
+font-size:60px;
+filter:drop-shadow(0 0 20px #c084fc);
+
+}
+
+
+.message p{
+
+font-size:25px;
+line-height:1.8;
+
+text-shadow:
+0 0 15px rgba(200,150,255,.7);
+
+}
+
+
+.line{
+
+width:120px;
+height:2px;
+
+margin:25px auto;
+
+background:#d8b4fe;
+
+}
+
+
+.message h2{
+
+font-size:38px;
+color:#e9d5ff;
+
+}
+
+
+button{
+
+position:absolute;
+bottom:30px;
+
+padding:12px 30px;
+
+border:none;
+border-radius:30px;
+
+background:#9333ea;
+color:white;
+
+font-size:18px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<section class="page page1">
+
+<h1>🌙</h1>
+
+<button onclick="go(2)">
+Next →
+</button>
+
+</section>
+
+
+
+<section class="page page2">
+
+<button onclick="go(3)">
+Next →
+</button>
+
+</section>
+
+
+
+<section class="page page3">
+
+
+<div class="message">
+
+<h1>🌙</h1>
+
+<p>
+अपना ध्यान रखो,<br>
+मेरे चाँद।
+</p>
+
+
+<div class="line"></div>
+
+
+<p>
+आप पहले हो,<br>
+जिनसे मैं मिला हूँ।<br>
+बाकी सब तो<br>
+मेरी बनाई हुई कहानियाँ थीं।
+</p>
+
+
+<div class="line"></div>
+
+
+<p>
+यह दुनिया नफ़रत और<br>
+धोखों से भरी हुई है,<br>
+और मुझे ऐसी दुनिया<br>
+बिल्कुल पसंद नहीं।
+</p>
+
+
+<div class="line"></div>
+
+
+<h2>
+मिलते हैं…
+</h2>
+
+
+<p>
+जब आप सच में याद करें। 🙃
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+let pages=document.querySelectorAll(".page");
+
+pages.forEach((p,i)=>{
+if(i!==0)
+p.style.display="none";
+});
+
+
+function go(n){
+
+pages.forEach(p=>p.style.display="none");
+
+pages[n-1].style.display="flex";
+
+}
+
+</script>
+
+
+</body>
+</html>
